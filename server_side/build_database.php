@@ -7,9 +7,6 @@
   createFoldersTable();
   createReferencesTable();
 
-	function dropUserTable() {
-    $db -> dropTable("user");
-  }
 
   //Create user table in the database
 	function createUserTable() {
