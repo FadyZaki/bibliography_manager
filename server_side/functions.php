@@ -294,6 +294,10 @@ function editUserDetails($uname, $old_password, $new_password, $user_bio) {
 	$query = "SELECT u.hash FROM user u WHERE u.id = ?";
 	$queryParams = array($_SESSION['user_id']);
 	$result = $db -> executeSelectOne($query, $queryParams);
+	print_r($result);
+	echo $old_password;
+	echo $new_password;
+	echo $user_bio;
 	if(validate($old_password, $result['hash'])) {
 		$query = "UPDATE user u SET u.hash = ?, u.uname = ?, u.user_bio = ? WHERE u.id = ?";
 		$queryParams = array(hash('md5', $new_password), $uname, $user_bio, $_SESSION['user_id']);

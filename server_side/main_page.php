@@ -247,7 +247,7 @@ include("header.php");
           <h4 class="modal-title">Edit User Details</h4>
         </div>
         
-        <form role="form" id="edit-user-form" class="edit-user-for" action="" method="post">
+        <form role="form" id="edit-user-form" class="edit-user-form" action="" method="post">
             <div class="modal-body">
                <?php
                 $query = "SELECT u.* FROM user u WHERE u.id = ? LIMIT 1";
