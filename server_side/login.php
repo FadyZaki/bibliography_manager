@@ -33,7 +33,7 @@ include("header.php");
 					                        </div>
 					                        <div class="form-group">
 					                        	<label class="sr-only" for="password">Password</label>
-					                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
+					                        	<input type="password" name="login-password" placeholder="Password..." class="form-password form-control" id="login-password">
 					                        </div>
 					                        <button type="submit" class="btn">Sign in!</button>
 					                    </form>
