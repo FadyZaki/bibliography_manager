@@ -4,15 +4,15 @@ class Db {
     
     protected $con;
     //Setting the database parameters 
-    //private $host = "eu-cdbr-azure-north-e.cloudapp.net";
-    //private $user = "bd80b4620f7590";
-    //private $pwd = "f82b669d";
-    //private $db = "acsm_ff9a877681889df";
+    private $host = "eu-cdbr-azure-north-e.cloudapp.net";
+    private $user = "bd80b4620f7590";
+    private $pwd = "f82b669d";
+    private $db = "acsm_ff9a877681889df";
 
-    private $host = "localhost";
-    private $user = "root";
-    private $pwd = "";
-    private $db = "bibliography_db";
+    //private $host = "localhost";
+    //private $user = "root";
+    //private $pwd = "";
+    //private $db = "bibliography_db";
     
     //Creates a PDO conection & sets error mode to exceptions
     public function __construct(){

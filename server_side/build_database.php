@@ -2,14 +2,13 @@
 	include("connect.php");
 	error_reporting(-1);
 	ini_set('display_errors', 'On');
-  //createUserTable();
-  //createFoldersTable();
-  createReferencesTable();
+  createUserTable();
+
 
 
   //Create user table in the database
 	function createUserTable() {
-	    global $db;
+	global $db;
 	    $creatUserTableSql = "CREATE TABLE IF NOT EXISTS user (
 		id int(6) NOT NULL AUTO_INCREMENT,
 		uname varchar(30) NOT NULL,
