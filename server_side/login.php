@@ -65,11 +65,11 @@ include("header.php");
 					                        </div>
 					                        <div class="form-group">
 					                        	<label class="sr-only" for="password">Password</label>
-					                        	<input type="password" id="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
+					                        	<input type="password" name="reg-password" placeholder="Password..." class="form-password form-control" id="reg-password">
 					                        </div>
 					                        <div class="form-group">
 					                        	<label class="sr-only" for="confirm_password">Password</label>
-					                        	<input type="password" name="confirm_password" placeholder="Password..." class="form-password form-control" data-rule-equalTo="#password" id="confirm_password">
+					                        	<input type="password" name="confirm_password" placeholder="Password..." class="form-password form-control" data-rule-equalTo="#reg-password" id="confirm_password">
 					                        </div>				                        
 					                        <div class="form-group">
 					                        	<label class="sr-only" for="user_bio">About yourself</label>
