@@ -5,9 +5,9 @@ class Db {
     protected $con;
     //Setting the database parameters 
     private $host = "eu-cdbr-azure-north-e.cloudapp.net";
-    private $user = "b5c2bdcd9046c0";
-    private $pwd = "b975203c";
-    private $db = "fadybibmanagerdb";
+    private $user = "bd80b4620f7590";
+    private $pwd = "f82b669d";
+    private $db = "acsm_ff9a877681889df";
     
     //Creates a PDO conection & sets error mode to exceptions
     public function __construct(){
