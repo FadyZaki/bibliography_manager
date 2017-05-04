@@ -13,6 +13,7 @@ function login($uname, $pass) {
 	$queryParams = array($uname);
 	$result = $db -> executeSelectOne($query, $queryParams);
 
+	print_r($result);
 	echo $uname;
 	echo $pass;
 	if(validate($pass, $result['hash'])) {
