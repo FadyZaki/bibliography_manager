@@ -36,7 +36,7 @@
           user_id INT(6) NOT NULL,
           PRIMARY KEY (id),
           FOREIGN KEY (user_id) REFERENCES user(id)
-          )";
+          );";
 
       if($db->createTable($creatFolderTableSql))
       	echo "<h3>Table Folder created.</h3>";
