@@ -19,11 +19,13 @@ function login($uname, $pass) {
 	if(validate($pass, $result['hash'])) {
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user_id'] = $result['id'];
-		return true;
+		echo "validation is ok";
 	}
 	else {
+		echo("no validation");
 		return false;
 	}
+	echo ("no result");
 	return $result;
 
 }
