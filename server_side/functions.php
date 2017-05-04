@@ -13,6 +13,8 @@ function login($uname, $pass) {
 	$queryParams = array($uname);
 	$result = $db -> executeSelectOne($query, $queryParams);
 
+	echo $uname;
+	echo $pass;
 	if(validate($pass, $result['hash'])) {
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user_id'] = $result['id'];
