@@ -108,6 +108,7 @@ include("header.php");
 			});
 			 
 			request.done(function( msg ) {
+			alert(msg);
 			  if(msg == 'true') {
 					window.location = "index.php";
 				} else if(msg == 'false') {
