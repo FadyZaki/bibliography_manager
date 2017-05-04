@@ -21,19 +21,13 @@ function login($uname, $pass) {
 	$queryParams = array($uname);
 	$result = $db -> executeSelectOne($query, $queryParams);
 
-	print_r($result);
-	echo $uname;
-	echo $pass;
 	if(validate($pass, $result['hash'])) {
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user_id'] = $result['id'];
-		echo "validation is ok";
 	}
 	else {
-		echo("no validation");
 		return false;
 	}
-	echo ("no result");
 	return $result;
 
 }
