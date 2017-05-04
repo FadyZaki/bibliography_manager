@@ -2,8 +2,8 @@
 	include("connect.php");
 	error_reporting(-1);
 	ini_set('display_errors', 'On');
-  createUserTable();
-  createFoldersTable();
+  //createUserTable();
+  //createFoldersTable();
   createReferencesTable();
 
 
@@ -42,8 +42,8 @@
   function createReferencesTable() {
       global $db;
       $createReferencesTableSql = "CREATE TABLE IF NOT EXISTS refs(
-          id INT(11) NOT NULL AUTO_INCREMENT,
-          pdf_url VARCHAR(500) NOT NULL,
+          id INT(6) NOT NULL AUTO_INCREMENT,
+          pdf_url VARCHAR(50) NOT NULL,
           title VARCHAR(100) NOT NULL,
           author VARCHAR(100) NOT NULL,
           year_published INT(4) NOT NULL,
@@ -51,7 +51,7 @@
           pages INT(10) DEFAULT NULL,
           abstract VARCHAR(45) DEFAULT NULL,
           volume INT(3) DEFAULT NULL,
-          folder_id INT(11) NOT NULL,
+          folder_id INT(6) NOT NULL,
           annote VARCHAR(500) DEFAULT NULL,
           book_title VARCHAR(100) DEFAULT NULL,
           chapter VARCHAR(100) DEFAULT NULL,
@@ -64,7 +64,8 @@
           publisher VARCHAR(100) DEFAULT NULL,
           PRIMARY KEY (id),
           UNIQUE KEY pdf_url_unique (pdf_url),
-          FOREIGN KEY (folder_id) REFERENCES folders(id));";
+          FOREIGN KEY (folder_id) REFERENCES folders(id)
+          );";
 
       if($db->createTable($createReferencesTableSql))
         echo "<h3>Table References created.</h3>";
