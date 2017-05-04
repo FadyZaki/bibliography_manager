@@ -16,7 +16,7 @@
 		user_bio varchar(300) NOT NULL,
 		PRIMARY KEY (id),
 		UNIQUE KEY uname (uname)
-		) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+		)";
 
 		if($db->createTable($creatUserTableSql))
 			echo "<h3>Table User created.</h3>";
