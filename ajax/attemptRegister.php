@@ -2,7 +2,7 @@
 include("../server_side/functions.php");
 //echo $_POST['email'];
 
-register($_POST['email'], $_POST['password'], $_POST['user_bio']);
+register($_POST['email'], $_POST['reg-password'], $_POST['user_bio']);
 
 $user_id = getUserId($_POST['email']);
 
