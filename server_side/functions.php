@@ -5,6 +5,14 @@ function isLoggedIn() {
 	return (isset($_SESSION['user_id']) && $_SESSION['logged_in'] == true);
 }
 
+function validate($plain, $hash) {
+
+	$thisHash = hash('md5', $plain);
+	//echo "this ".$thisHash;
+	//echo "<br>that ".$hash;
+	return $thisHash === $hash;
+}
+
 function login($uname, $pass) {
 	session_start();
 	global $db;
@@ -38,14 +46,6 @@ function logout() {
 	session_destroy();
 
 	return true;
-}
-
-function validate($plain, $hash) {
-
-	$thisHash = hash('md5', $plain);
-	//echo "this ".$thisHash;
-	//echo "<br>that ".$hash;
-	return $thisHash === $hash;
 }
 
 function register($uname, $pass, $user_bio) {
